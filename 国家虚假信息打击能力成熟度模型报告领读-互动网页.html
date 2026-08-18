@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认知域的保卫战 - 交互式报告领读</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+        body { font-family: 'Noto Sans SC', sans-serif; background-color: #f0f2f5; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .glass-morphism { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .formula-card { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <header class="max-w-5xl mx-auto text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">认知域的保卫战</h1>
+        <p class="text-lg text-slate-600 italic">国家虚假信息打击能力成熟度模型报告领读</p>
+        <div class="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
+    </header>
+
+    <!-- 思维导图部分 -->
+    <section class="max-w-6xl mx-auto mb-12 glass-morphism rounded-2xl p-6 shadow-xl">
+        <h2 class="text-xl font-bold mb-6 flex items-center">
+            <span class="bg-blue-600 text-white p-1 rounded mr-2 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+            </span>
+            全景思维导图
+        </h2>
+        <div class="mermaid overflow-x-auto text-center">
+            graph TD
+                Root((认知域保卫战))
+                Root --> S1[一、概念定义]
+                Root --> S2[二、危害影响]
+                Root --> S3[三、AI加速器]
+                Root --> S4[四、打击策略]
+                Root --> S5[五、各国实践]
+                Root --> S6[六、结语总结]
+
+                S1 --> S1_1(三类信息: 误传/虚假/恶性)
+                S1 --> S1_2(代理人 Proxy)
+                S1 --> S1_3(生存概率公式)
+
+                S2 --> S2_1(急性危害: 健康/安全/选举)
+                S2 --> S2_2(慢性危害: 真相衰减)
+
+                S3 --> S3_1(垃圾宣传: 幻觉)
+                S3 --> S3_2(偏见回声: 放大)
+                S3 --> S3_3(深度伪造: 颠覆真实)
+
+                S4 --> S4_1(降级: 干扰)
+                S4 --> S4_2(腐蚀: 以毒攻毒)
+                S4 --> S4_3(拒绝: 物理封锁)
+                S4 --> S4_4(免疫: 精神疫苗)
+
+                S5 --> S5_1(美国: GEC与政策调整)
+                S5 --> S5_2(瑞典: 心理防御局)
+                S5 --> S5_3(欧盟: 数字服务法案)
+        </div>
+    </section>
+
+    <!-- 交互式板块 -->
+    <main class="max-w-5xl mx-auto">
+        <!-- 导航标签 -->
+        <nav class="flex flex-wrap gap-2 mb-6 justify-center">
+            <button onclick="showTab('tab1')" class="tab-btn px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 hover:bg-blue-50 transition active-btn" id="btn-tab1">1. 定义</button>
+            <button onclick="showTab('tab2')" class="tab-btn px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 hover:bg-blue-50 transition" id="btn-tab2">2. 影响</button>
+            <button onclick="showTab('tab3')" class="tab-btn px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 hover:bg-blue-50 transition" id="btn-tab3">3. AI升级</button>
+            <button onclick="showTab('tab4')" class="tab-btn px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 hover:bg-blue-50 transition" id="btn-tab4">4. 策略</button>
+            <button onclick="showTab('tab5')" class="tab-btn px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 hover:bg-blue-50 transition" id="btn-tab5">5. 全球实践</button>
+            <button onclick="showTab('tab6')" class="tab-btn px-4 py-2 rounded-full bg-white shadow-sm border border-slate-200 hover:bg-blue-50 transition" id="btn-tab6">6. 总结</button>
+        </nav>
+
+        <!-- 内容区域 -->
+        <div class="glass-morphism rounded-3xl p-6 md:p-10 shadow-2xl min-h-[400px]">
+            
+            <!-- 板块 1 -->
+            <div id="tab1" class="tab-content active">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6">一、虚假信息的定义与公式</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-blue-50 p-4 rounded-xl border-l-4 border-blue-500">
+                        <h4 class="font-bold mb-2">核心三要素：</h4>
+                        <ul class="list-disc ml-5 space-y-2 text-slate-700">
+                            <li><strong>误传 (Mis-information):</strong> 信息错但无恶意。</li>
+                            <li><strong>虚假信息 (Dis-information):</strong> 故意制造伤害（防御重点）。</li>
+                            <li><strong>恶性信息 (Mal-information):</strong> 真实事实但恶意公开（如泄密）。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 p-4 rounded-xl border-l-4 border-amber-500">
+                        <h4 class="font-bold mb-2">“代理人” (Proxy)：</h4>
+                        <p class="text-sm text-slate-700 leading-relaxed">制造者往往不亲自传播，利用社交媒体转发者、流量媒体甚至 AI 机器人来放大传播，导致追溯困难。</p>
+                    </div>
+                </div>
+                <div class="formula-card p-6 rounded-2xl shadow-inner text-center">
+                    <p class="text-sm opacity-80 mb-2">虚假信息生存概率公式</p>
+                    <p class="text-3xl font-mono font-bold mb-4">PSD = 1 - (PH × PV)</p>
+                    <div class="grid grid-cols-3 text-xs gap-2">
+                        <div><strong>PSD</strong><br>保持理性/不被误导的机会</div>
+                        <div><strong>PH</strong><br>接触频率/暴露度</div>
+                        <div><strong>PV</strong><br>脆弱性/认知偏见</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 2 -->
+            <div id="tab2" class="tab-content">
+                <h3 class="text-2xl font-bold text-red-800 mb-6">二、虚假信息的影响</h3>
+                <div class="space-y-6">
+                    <div class="group">
+                        <h4 class="font-bold text-lg border-b pb-2 flex items-center">
+                            <span class="mr-2">⚡</span> 急性危害（对个体与社会）
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                            <div class="p-3 bg-white rounded shadow-sm border border-red-100 italic">“健康安全：伪科学疗法直接导致伤亡。”</div>
+                            <div class="p-3 bg-white rounded shadow-sm border border-red-100 italic">“公众恐慌：灾害虚假警报引发动荡踩踏。”</div>
+                            <div class="p-3 bg-white rounded shadow-sm border border-red-100 italic">“选举诚信：操纵投票程序干扰决策。”</div>
+                            <div class="p-3 bg-white rounded shadow-sm border border-red-100 italic">“金融经济：诈骗与财务损失。”</div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <h4 class="font-bold text-lg border-b pb-2 flex items-center">
+                            <span class="mr-2">⏳</span> 慢性危害（真相衰减 Truth Decay）
+                        </h4>
+                        <p class="text-slate-600 mt-2">源自兰德公司概念，特征包括：</p>
+                        <ul class="mt-2 space-y-1 list-inside list-disc text-slate-700">
+                            <li>事实数据分歧日益增加</li>
+                            <li>意见与事实界限模糊</li>
+                            <li>意见数量盖过事实</li>
+                            <li>对权威信息源（科学界、媒体）失去信任</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 3 -->
+            <div id="tab3" class="tab-content">
+                <h3 class="text-2xl font-bold text-purple-800 mb-6">三、人工智能如何升级虚假信息</h3>
+                <div class="space-y-4">
+                    <div class="flex gap-4 p-4 bg-purple-50 rounded-lg">
+                        <div class="text-3xl">🗑️</div>
+                        <div>
+                            <h4 class="font-bold">垃圾宣传</h4>
+                            <p class="text-sm text-slate-600">AI 极低门槛生成海量欺骗性文案。本质是奖励“猜测”，产生自信的“幻觉”。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 bg-purple-50 rounded-lg">
+                        <div class="text-3xl">📢</div>
+                        <div>
+                            <h4 class="font-bold">偏见的回声</h4>
+                            <p class="text-sm text-slate-600">AI 放大训练数据（维基、社交媒体）中的歧视，通过算法制造信息茧房。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 bg-purple-50 rounded-lg border-2 border-purple-200">
+                        <div class="text-3xl">🎭</div>
+                        <div>
+                            <h4 class="font-bold text-purple-700">深度伪造 (Deepfake)</h4>
+                            <p class="text-sm text-slate-700 font-medium">最致命威胁。利用 GAN 技术伪造视频/录音，彻底颠覆“眼见为实”。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 4 -->
+            <div id="tab4" class="tab-content">
+                <h3 class="text-2xl font-bold text-emerald-800 mb-6">四、打击虚假信息的四类策略</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 border border-emerald-100 rounded-xl hover:shadow-md transition">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">Degradation</span>
+                        <h4 class="font-bold text-lg mb-2">降级策略：制造干扰</h4>
+                        <p class="text-sm text-slate-600">DDoS攻击源服务器，或用大量真实信息淹没对手噪音。</p>
+                    </div>
+                    <div class="p-4 border border-emerald-100 rounded-xl hover:shadow-md transition">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">Corruption</span>
+                        <h4 class="font-bold text-lg mb-2">腐蚀策略：以毒攻毒</h4>
+                        <p class="text-sm text-slate-600">针对代理人进行反向心理战，发布低劣仿制品揭露套路。</p>
+                    </div>
+                    <div class="p-4 border border-emerald-100 rounded-xl hover:shadow-md transition">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">Denial</span>
+                        <h4 class="font-bold text-lg mb-2">拒绝策略：物理封锁</h4>
+                        <p class="text-sm text-slate-600">最常见也最具争议。算法过滤、封号禁言、立法监管。挑战在于“谁是真理仲裁者”。</p>
+                    </div>
+                    <div class="p-4 bg-emerald-600 text-white rounded-xl shadow-lg transform scale-105">
+                        <span class="text-xs font-bold opacity-80 uppercase">Immunisation</span>
+                        <h4 class="font-bold text-lg mb-2">免疫策略：精神疫苗</h4>
+                        <p class="text-sm opacity-90"><strong>报告最为推崇。</strong> 通过提前预告谣言、教会识别套路、培养批判性思维来降低民众脆弱性。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 5 -->
+            <div id="tab5" class="tab-content">
+                <h3 class="text-2xl font-bold text-indigo-800 mb-6">五、各国治理实践案例</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="bg-indigo-100 text-indigo-800 font-bold px-3 py-1 rounded">美国</div>
+                        <p class="text-sm text-slate-700">依靠 GEC 盯防外部势力，但在国内面临“第一修正案”（言论自由）困境，“虚假信息治理委员会”因民众担忧而失败。</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="bg-indigo-100 text-indigo-800 font-bold px-3 py-1 rounded">瑞典</div>
+                        <p class="text-sm text-slate-700">成立“心理防御局”，将打击虚假信息提升至国防高度，强调全社会防御。</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="bg-indigo-100 text-indigo-800 font-bold px-3 py-1 rounded">欧盟</div>
+                        <p class="text-sm text-slate-700">通过《数字服务法案》实现法制化，提议建立“欧洲民主之盾”，被评为目前最全面的机制。</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="bg-indigo-100 text-indigo-800 font-bold px-3 py-1 rounded">澳洲</div>
+                        <p class="text-sm text-slate-700">倾向于制定行业行为准则，推动公司自愿履行监管。 </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 板块 6 -->
+            <div id="tab6" class="tab-content">
+                <div class="text-center py-10">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-6">结语：认知长城的砖瓦</h3>
+                    <div class="max-w-2xl mx-auto space-y-4 text-lg text-slate-600 leading-relaxed">
+                        <p>虚假信息已演变成针对特定人群、甚至个人的精密“杀猪盘”。</p>
+                        <p class="bg-slate-800 text-white p-4 rounded-lg shadow-xl">
+                            "打击虚假信息不能单靠政府，也不能单靠技术。需要从法律框架、技术手段到国民素养建立全方位的成熟体系。"
+                        </p>
+                        <p class="font-bold text-blue-600">
+                            保持怀疑、审慎分享、持续学习。
+                        </p>
+                        <p>这是每个人不被黑掉大脑的最后防线。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="mt-12 text-center text-slate-400 text-sm">
+        <p>基于《国家虚假信息打击能力成熟度模型》报告整理</p>
+    </footer>
+
+    <script>
+        // 初始化 Mermaid
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+
+        // 标签切换逻辑
+        function showTab(tabId) {
+            // 隐藏所有内容
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // 显示选中内容
+            document.getElementById(tabId).classList.add('active');
+
+            // 更新按钮样式
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-800');
+            });
+            document.getElementById('btn-' + tabId).classList.remove('bg-white', 'text-slate-800');
+            document.getElementById('btn-' + tabId).classList.add('bg-blue-600', 'text-white');
+        }
+
+        // 初始化第一个按钮样式
+        document.getElementById('btn-tab1').classList.add('bg-blue-600', 'text-white');
+    </script>
+</body>
+</html>
